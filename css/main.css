@@ -3,6 +3,17 @@ body {
 	margin: 0;
 }
 
+nav {
+	width: 30%;
+	background-color: black;
+	float: left;
+	height: 100vh;
+}
+
+	nav ul li {
+		color: white;
+	}
+
 header {
 	background-image: url("../img/b1.jpg");
 	background-repeat: no-repeat;
@@ -10,6 +21,8 @@ header {
 	background-position: 50% 0px;
 	display: block;
 	padding: 0;
+	width: 70%;
+	float: left;
 }
 
 body {

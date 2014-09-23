@@ -3,32 +3,51 @@ var SITE = SITE || {};
 (function () {
 	SITE.init = function () {
 		SITE.retrieveValues.windowValues();
-	}
+	},
 
 	SITE.retrieveValues = {
 		windowValues: function () {
 			var windowHeight = $(document).height();
 			SITE.adjustWindows(windowHeight);
 		}
-	}
+	},
 
 	SITE.adjustWindows = function (height) {
 		$("header").css("height", height);
-		
-		setInterval(function () {
-			SITE.intervalChangeBackground.init();
-		}, 3000);
-	}
+
+		SITE.intervalChangeBackground.init();
+	},
 
 	SITE.intervalChangeBackground = {
-		var i = 1;
-		var lastImage = 2;
+		init: function () {
+			var i = 1;
+		
+			setInterval(function () {
+				SITE.intervalChangeBackground.change(i);
+				i++;
 
-		init: function {
-			console.log(i);
+				if (i == 3) {
+					i = 1;
+				}
+			}, 5000);
+		},
+
+		change: function (i) {
+			var url = "url('img/b" + i + ".jpg')";
+
+			$("header").animate ({
+				opacity: 0
+			}, 500, function () {
+				$("header").css('background-image', url);
+
+				$("header").animate ({
+					opacity: 1
+				}, 500, function () {
+					console.log("finito");
+				});
+			});
 		}
-	}
-	console.log("Banaan");
+	},
 
 
 
