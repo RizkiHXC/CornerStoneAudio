@@ -13,7 +13,7 @@ var SITE = SITE || {};
 	},
 
 	SITE.adjustWindows = function (height) {
-		$("header").css("height", height);
+		$("#content-container").css("height", height);
 
 		SITE.intervalChangeBackground.init();
 	},
@@ -26,23 +26,23 @@ var SITE = SITE || {};
 				SITE.intervalChangeBackground.change(i);
 				i++;
 
-				if (i == 3) {
+				if (i == 11) {
 					i = 1;
 				}
 			}, 5000);
 		},
 
 		change: function (i) {
-			var url = "url('img/b" + i + ".jpg')";
+			var url = "url('img/b" + i + ".jpeg')";
 
-			$("header").animate ({
+			$("#content-container").animate ({
 				opacity: 0
 			}, 500, function () {
-				$("header").css('background-image', url);
+				$("#content-container").css('background-image', url);
 
-				$("header").animate ({
+				$("#content-container").animate ({
 					opacity: 1
-				}, 500, function () {
+				}, 1000, function () {
 					console.log("finito");
 				});
 			});
