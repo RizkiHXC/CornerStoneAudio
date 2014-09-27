@@ -22,31 +22,33 @@ var SITE = SITE || {};
 		init: function () {
 			var i = 1;
 		
-			// setInterval(function () {
-			// 	i++;
-			// 	SITE.intervalChangeBackground.change(i);
+			setInterval(function () {
+				i++;
+				SITE.intervalChangeBackground.change(i);
 
 
-			// 	if (i == 11) {
-			// 		i = 1;
-			// 	}
-			// }, 5000);
+				if (i == 11) {
+					i = 1;
+				}
+			}, 5000);
 		},
 
 		change: function (i) {
 			var url = "url('img/b" + i + ".jpeg')";
+			$("#content-container").css('background-image', url);
+			
 
-			$("#content-container").animate ({
-				opacity: 0
-			}, 500, function () {
-				$("#content-container").css('background-image', url);
+			// $("#content-container").animate ({
+			// 	opacity: 0
+			// }, 500, function () {
+			// 	$("#content-container").css('background-image', url);
 
-				$("#content-container").animate ({
-					opacity: 1
-				}, 1000, function () {
-					console.log("finito");
-				});
-			});
+			// 	$("#content-container").animate ({
+			// 		opacity: 1
+			// 	}, 1000, function () {
+			// 		console.log("finito");
+			// 	});
+			// });
 		}
 	},
 
