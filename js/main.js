@@ -22,14 +22,15 @@ var SITE = SITE || {};
 		init: function () {
 			var i = 1;
 		
-			setInterval(function () {
-				SITE.intervalChangeBackground.change(i);
-				i++;
+			// setInterval(function () {
+			// 	i++;
+			// 	SITE.intervalChangeBackground.change(i);
 
-				if (i == 11) {
-					i = 1;
-				}
-			}, 5000);
+
+			// 	if (i == 11) {
+			// 		i = 1;
+			// 	}
+			// }, 5000);
 		},
 
 		change: function (i) {
