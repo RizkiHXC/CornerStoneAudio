@@ -5,6 +5,28 @@
         <meta charset="utf-8" />
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+
+        <script src="http://code.jquery.com/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="http://stratus.sc/stratus.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    
+
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+$('body').stratus({
+      auto_play: true,
+      download: false,
+      links: 'https://soundcloud.com/blazingaudio/sets/rap-instrumentals',
+      random: true,
+    buying: true,
+    user: false,
+    stats: false,
+      });
+});
+        </script>
+
     </head>
 	<body>
         <nav>
@@ -78,7 +100,7 @@
 
         </article>
 
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-        <script src="js/main.js" type="text/javascript"></script>
+
+
 	</body>
 </html>
