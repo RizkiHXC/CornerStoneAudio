@@ -48,7 +48,7 @@ var SITE = SITE || {};
 				SITE.intervalChangeBackground.change(i);
 
 
-				if (i == 10) {
+				if (i == 9) {
 					i = 1;
 				}
 			}, 5000);
