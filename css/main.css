@@ -91,6 +91,7 @@ nav {
 		width: 80%;
 		margin: 0 auto 0 auto;
 		overflow: scroll;
+		background-color: #000
 	}
 		.page-container h1 {
 			font-family: "Lato-Thin";
@@ -102,5 +103,20 @@ nav {
 		.container {
 			background-color: white;
 			opacity: .95;
-			height: 200vh;
+			height: 100vh;
 		}
+
+.intro {
+	width: 30%;
+	background-color: black;
+	float: left;
+	height: 100vh;
+	font-family: "Lato-Light";
+	font-size: 1.5em;
+	letter-spacing: 2px;
+
+}
+
+.portfolio-item {
+	padding:100vh;
+}
