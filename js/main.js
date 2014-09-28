@@ -1,6 +1,31 @@
 var SITE = SITE || {};
 
 (function () {
+	SITE.preload = function () {
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"img/b1.jpeg",
+				"img/b2.jpeg",
+				"img/b3.jpeg",
+				"img/b4.jpeg",
+				"img/b5.jpeg",
+				"img/b6.jpeg",
+				"img/b7.jpeg",
+				"img/b8.jpeg"
+			)
+
+		$.stratus({
+      		links: 'http://soundcloud.com/foofighters/sets/wasting-light'
+   		 });
+
+		SITE.init();
+	}, 
 	SITE.init = function () {
 		SITE.retrieveValues.windowValues();
 		SITE.linkEventListener.init();
@@ -30,6 +55,12 @@ var SITE = SITE || {};
 			}
 
 			return page;
+		},
+
+		allPages: function () {
+			var array = [$("#portfolio"), $("#rates"), $("#media"), $("#about"), $("#contact")];
+
+			return array;
 		}
 	},
 
@@ -44,11 +75,12 @@ var SITE = SITE || {};
 			var i = 1;
 		
 			setInterval(function () {
+				var lastImage = 8;
 				i++;
 				SITE.intervalChangeBackground.change(i);
 
 
-				if (i == 9) {
+				if (i == lastImage) {
 					i = 1;
 				}
 			}, 5000);
@@ -71,35 +103,22 @@ var SITE = SITE || {};
 
 	SITE.pageController = {
 		changePage: function (dataRoute) {
-			var activePage = SITE.importantValues.pageWithDataRoute(dataRoute);
+			var allPages = SITE.importantValues.allPages();	
 
-			activePage.removeClass("hide");
-			activePage.addClass("show");
-
-			var nav = document.getElementsByTagName("nav");
-			var nums = nav.getElementsByTagName("ul");
-			var listItem = nums.getElementsByTagName("li");
-
-			var newNums = [];
-
-			var o = 0;
-
-			for (var i=0; i < listItem.length; i++) {
-			    if (!$(listItem).hasClass("dataRoute")) {
-				    console.log(o);
-				    o++;
-				} 
+			for (i = 0; i < allPages.length; i++) {
+				if ($(allPages[i]).attr('data-route') == dataRoute) {
+					allPages[i].removeClass("hide");
+					allPages[i].addClass("show");
+					console.log(i);
+				} else {
+					allPages[i].removeClass("show");
+					allPages[i].addClass("hide");
+				}
 			}
 		}
 	},
 
 	$(document).ready(function () {
-
-		 $.stratus({
-      		links: 'http://soundcloud.com/foofighters/sets/wasting-light'
-   		 });
-
-		SITE.init();
-
+		SITE.preload();
 	});
 })();
