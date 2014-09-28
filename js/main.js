@@ -3,6 +3,7 @@ var SITE = SITE || {};
 (function () {
 	SITE.init = function () {
 		SITE.retrieveValues.windowValues();
+		SITE.linkEventListener.init();
 	},
 
 	SITE.retrieveValues = {
@@ -23,10 +24,11 @@ var SITE = SITE || {};
 			var i = 1;
 		
 			setInterval(function () {
-				SITE.intervalChangeBackground.change(i);
 				i++;
+				SITE.intervalChangeBackground.change(i);
 
-				if (i == 11) {
+
+				if (i == 10) {
 					i = 1;
 				}
 			}, 5000);
@@ -34,29 +36,17 @@ var SITE = SITE || {};
 
 		change: function (i) {
 			var url = "url('img/b" + i + ".jpeg')";
-
-			$("#content-container").animate ({
-				opacity: 0
-			}, 500, function () {
-				$("#content-container").css('background-image', url);
-
-				$("#content-container").animate ({
-					opacity: 1
-				}, 1000, function () {
-					console.log("finito");
-				});
-			});
+			$("#content-container").css('background-image', url);
 		}
 	},
 
-
-
-
-
-
-
-
-
+	SITE.linkEventListener = {
+		init: function () {
+			$("nav ul li").click(function (){
+				console.log(this);
+			});
+		}
+	}
 	$(document).ready(function () {
 		SITE.init();
 	});
