@@ -16,6 +16,8 @@ var SITE = SITE || {};
 	SITE.importantValues = {
 		pageWithDataRoute: function (dataRoute) {
 			var page;
+			var spinner = document.getElementById("#spinner");
+			spinner.addClass("hide");
 
 			if (dataRoute === "0") {
 				return $("#portfolio");
@@ -72,11 +74,15 @@ var SITE = SITE || {};
 	SITE.pageController = {
 		changePage: function (dataRoute) {
 			var activePage = SITE.importantValues.pageWithDataRoute(dataRoute);
+			var spinner = document.getElementById("#spinner");
 
 			activePage.removeClass("hide");
 			activePage.addClass("show");
+			spinner.removeClass("show");
+			spinner.addClass("hide");
 
 			var nav = document.getElementsByTagName("nav");
+
 			var nums = nav.getElementsByTagName("ul");
 			var listItem = nums.getElementsByTagName("li");
 
@@ -94,10 +100,6 @@ var SITE = SITE || {};
 	},
 
 	$(document).ready(function () {
-
-		 $.stratus({
-      		links: 'http://soundcloud.com/foofighters/sets/wasting-light'
-   		 });
 
 		SITE.init();
 
