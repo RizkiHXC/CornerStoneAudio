@@ -126,6 +126,30 @@ nav {
 				padding: 0 0 1em 0;
 			}
 
+.intro {
+	width: 30%;
+	background-color: black;
+	float: left;
+	height: 100vh;
+	font-family: "Lato-Light";
+	font-size: 1.5em;
+	letter-spacing: 2px;
+
+}
+
+.portfolio-info {
+	float:right;
+	margin-right: 55vh;
+	margin-top:2vh;
+}
+.container ul {
+	list-style: none;
+	float:left;
+}
+
+.container ul li {
+	font-family: "Lato-Light"
+}
 
 /*CONTACT SPECIFIC*/
 		#contact {
@@ -195,17 +219,6 @@ nav {
 					}
 
 
-
-.intro {
-	width: 30%;
-	background-color: black;
-	float: left;
-	height: 100vh;
-	font-family: "Lato-Light";
-	font-size: 1.5em;
-	letter-spacing: 2px;
-
-}
 
 
 
