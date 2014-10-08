@@ -139,8 +139,9 @@ nav {
 
 .portfolio-info {
 	float:right;
-	margin-right: 55vh;
+	margin-right: 20%;
 	margin-top:2vh;
+	width:50%;
 }
 .container ul {
 	list-style: none;
@@ -220,5 +221,200 @@ nav {
 
 
 
+@media (max-width: 1200px) {
 
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: white;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+nav {
+	width: 360px;
+	background-color: black;
+	float: left;
+	height: 100vh;
+	font-family: "Lato-Light";
+	font-size: 1.5em;
+	letter-spacing: 2px;
+}
+	nav .img-container-center {
+		width: 100%;
+		max-width: 350px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	nav .img-container-center img {
+		width: 100%;
+	}
+
+	nav ul {
+		list-style: none;
+		text-align: right;
+		padding: 0;
+	}
+
+		nav ul li {
+			color: white;
+			padding: .5em 2em .5em 0;
+			border-bottom: 1px solid black;
+
+		}
+
+		nav ul li:hover {
+			border-bottom: 1px solid white;
+		}
+
+#content-container {
+	background-image: url("../img/b1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0px;
+	display: block;
+	padding: 0;
+	width: 840px;
+	height: 100vh;
+	max-height: 100vh;
+	float: left;
+	transition: 2s;
+	overflow: hidden;
+}
+
+	.page-container {
+		height: 100vh;
+		max-height: 100vh;
+		width: 80%;
+		margin: 0 auto 0 auto;
+		overflow: scroll;
+		transition: 2s;
+	}
+		.page-container h1 {
+			font-family: "Lato-Thin";
+			font-size: 5em;
+			margin: 20vh 0 0 0;
+			color: white;
+		}
+
+		.container {
+			background-color: white;
+			opacity: .95;
+			padding: 2em 2em 20em 2em;
+		}
+
+			.container h2 {
+				font-family: "Lato-Medium";
+			}
+
+			.regular-txt {
+				font-family: "Lato-Regular"
+			}
+
+			.container > p.regular-txt:nth-of-type(1) {
+				border-bottom: 1px solid black;
+				padding: 0 0 1em 0;
+			}
+
+.intro {
+	width: 30%;
+	background-color: black;
+	float: left;
+	height: 100vh;
+	font-family: "Lato-Light";
+	font-size: 1.5em;
+	letter-spacing: 2px;
+
+}
+
+.portfolio-info {
+	float:right;
+	margin-right: 20%;
+	margin-top:2vh;
+	width:50%;
+}
+.container ul {
+	list-style: none;
+	float:left;
+}
+
+.container ul li {
+	font-family: "Lato-Light"
+}
+
+/*CONTACT SPECIFIC*/
+		#contact {
+
+		}
+
+			#contact article {
+
+			}
+
+				#contact article form {
+
+				}
+
+					#contact article form label.input-label {
+						display: block;
+						font-family: "Lato-Light";
+						font-size: 2em;
+					}
+
+					#contact article form label.radio-label {
+						font-family: "Lato-Light";
+						font-size: 1em;
+						margin: 0 1em 0 .2em;
+					}
+
+					#contact article form label.mid-label {
+						font-size: 1em;
+						font-family: "Lato-Light";
+						margin: 0 1em;
+					}
+
+					#contact article form input {
+						margin: 0 0 1em 0;
+						background-color: white;
+					}
+
+					#contact article form input[type=text] {
+						width: 100%;
+						font-size: 1.5em;
+						padding: .2em;
+						font-family: "Lato-Regular";
+					}
+
+					#contact article form input[type=date] {
+						font-size: 1.5em;
+						font-family: "Lato-Light";
+					}
+
+					#contact article form textarea {
+						width: 100%;
+						height: 400px;
+						margin: 0 0 1em 0;
+						resize: none;
+					}
+
+					#contact article form input[type=submit] {
+						display: block;
+						width: 200px;
+						height: 100px;
+						font-family: "Lato-Light";
+						float: right;
+						background-color: rgba(50, 50, 50, 1);
+						color: white;
+						margin: 5em 0 0 0;
+						font-size: 1.5em;
+					}
+}
 
