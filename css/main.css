@@ -152,6 +152,23 @@ nav {
 	font-family: "Lato-Light"
 }
 
+/*MEDIA SPECIFIC*/
+		#media-container {
+			width: 100%;
+		}
+
+			#media-container ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			#media-container ul li {
+				height: 100px;
+				width: 100px;
+				float: left;
+				margin: 1em 0 0 1em;
+			}
+
 /*CONTACT SPECIFIC*/
 		#contact {
 
