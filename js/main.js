@@ -60,9 +60,11 @@ var SITE = SITE || {};
 		}
 	},
 
+	
+
 	SITE.adjustWindows = function (height) {
 		$("body").css("height", height);
-
+		$("#spinner").addClass("hide");
 		SITE.intervalChangeBackground.init();
 	},
 
@@ -75,7 +77,6 @@ var SITE = SITE || {};
 				i++;
 				SITE.intervalChangeBackground.change(i);
 
-
 				if (i == lastImage) {
 					i = 1;
 				}
@@ -85,6 +86,7 @@ var SITE = SITE || {};
 		change: function (i) {
 			var url = "url('img/b" + i + ".jpeg')";
 			$("body").css('background-image', url);
+
 		}
 	},
 
