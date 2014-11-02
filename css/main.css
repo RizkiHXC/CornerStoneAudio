@@ -22,14 +22,12 @@
 
 /*---------------*/
 
-
-
-
-
 body {
 	padding: 0;
 	margin: 0;
-	background-color: black;
+	background-image: url("../img/b1.jpeg");
+	background-size: cover;
+	background-position: 50% 0px;
 }
 
 .hide {
@@ -42,12 +40,12 @@ body {
 
 nav {
 	width: 30%;
-	background-color: black;
 	float: left;
 	height: 100vh;
 	font-family: "Lato-Light";
 	font-size: 1.5em;
 	letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 	nav .img-container-center {
 		width: 100%;
@@ -78,7 +76,7 @@ nav {
 		}
 
 #content-container {
-	background-image: url("../img/b1.jpeg");
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 0px;
@@ -111,6 +109,7 @@ nav {
 			background-color: white;
 			opacity: .95;
 			padding: 2em 2em 20em 2em;
+			margin-bottom: 1em;
 		}
 
 			.container h2 {
@@ -155,11 +154,12 @@ nav {
 /*MEDIA SPECIFIC*/
 		#media-container {
 			width: 100%;
+			padding-bottom: 1.5em;
 		}
 
 			#media-container ul {
-				margin: 0;
 				padding: 0;
+				margin:0;
 			}
 
 			#media-container ul li {
@@ -167,6 +167,10 @@ nav {
 				width: 100px;
 				float: left;
 				margin: 1em 0 0 1em;
+			}
+
+			.media-blocks {
+				padding:1em;
 			}
 
 /*CONTACT SPECIFIC*/

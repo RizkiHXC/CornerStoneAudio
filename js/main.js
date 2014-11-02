@@ -20,10 +20,6 @@ var SITE = SITE || {};
 				"img/b8.jpeg"
 			)
 
-		$.stratus({
-      		links: 'http://soundcloud.com/foofighters/sets/wasting-light'
-   		 });
-
 		SITE.init();
 	}, 
 	SITE.init = function () {
@@ -65,7 +61,7 @@ var SITE = SITE || {};
 	},
 
 	SITE.adjustWindows = function (height) {
-		$("#content-container").css("height", height);
+		$("body").css("height", height);
 
 		SITE.intervalChangeBackground.init();
 	},
@@ -88,7 +84,7 @@ var SITE = SITE || {};
 
 		change: function (i) {
 			var url = "url('img/b" + i + ".jpeg')";
-			$("#content-container").css('background-image', url);
+			$("body").css('background-image', url);
 		}
 	},
 
