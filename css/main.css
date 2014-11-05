@@ -132,11 +132,13 @@ nav {
 			}
 			.regular-txt {
 				font-family: "Lato-Regular";
+				font-size: 1.2em;
 			}
 
 			.regular-txt-mid {
 				font-family: "Lato-Regular";
 				text-align:center;
+				font-size: 1.2em;
 			}
 
 
@@ -154,11 +156,6 @@ nav {
 .portfolio-item {
 	width:96%;
 	padding:1em;
-}
-
-.portfolio-item:hover {
-	  background-color: rgba(0, 0, 0, 0.7);
-	  color:white;
 }
 
 .portfolio-item img {
@@ -215,6 +212,10 @@ nav {
 				padding:1em;
 			}
 
+			#soundcloud-player {
+				margin-top: 100px;
+			}
+
 /*CONTACT SPECIFIC*/
 		#contact {
 
@@ -268,6 +269,8 @@ nav {
 						height: 400px;
 						margin: 0 0 1em 0;
 						resize: none;
+						font-size: 1.5em;
+						font-family: "Lato-Light";
 					}
 
 					#contact article form input[type=submit] {
