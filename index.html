@@ -249,7 +249,7 @@
                         Interested in working together with me? Or do you have any other questions that you feel like asking? Don't hesitate to contact me using the below form.
                     </p>
 
-                    <form action="php/mail.php" type="post">
+                    <form action="php/mail.php" method="post">
                         <label class="input-label">Full name</label>
                         <input type="text" name="full-name" />
 
@@ -260,12 +260,12 @@
                         <input type="text" name="email" />
 
                         <label class="input-label">What are you looking for?</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Recording</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Editing</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Mixing</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Mastering</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Reamping</label>
-                        <input type="checkbox" name="services[]" /><label class="radio-label">Other</label>
+                        <input type="checkbox" name="services[]" value="Recording" /><label class="radio-label">Recording</label>
+                        <input type="checkbox" value="Editing" name="services[]" /><label class="radio-label">Editing</label>
+                        <input type="checkbox" value="Mixing" name="services[]" /><label class="radio-label">Mixing</label>
+                        <input type="checkbox" value="Mastering" name="services[]" /><label class="radio-label">Mastering</label>
+                        <input type="checkbox" value="Reamping" name="services[]" /><label class="radio-label">Reamping</label>
+                        <input type="checkbox" value="Other" name="services[]" /><label class="radio-label">Other</label>
 
                         <label class="input-label">Number of songs</label>
                         <input type="text" name="nr-songs" />
