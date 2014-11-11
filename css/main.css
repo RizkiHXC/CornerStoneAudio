@@ -349,6 +349,7 @@ nav {
     transform: rotate(-360deg);
   }
 }
+
 #spinner {
   position: fixed;
   width: 34px;
@@ -388,7 +389,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: white;
-	width: 1200px;
+	width: 1440px;
 }
 
 .hide {
@@ -404,7 +405,7 @@ nav {
 }
 
 #content-container {
-	width: 840px;
+	width: 960px;
 	display: inline-block;
 	float: right;
 	height: 100vh;
@@ -415,7 +416,7 @@ nav {
 }
 
 	.page-container {
-		height: 100vh;
+		height: 1080px;
 		max-height: 100vh;
 		width: 80%;
 		margin: 0 auto 0 auto;
@@ -458,20 +459,6 @@ nav {
 	letter-spacing: 2px;
 
 }
-
-.portfolio-info {
-	float:left;
-	margin-right: 20%;
-	margin-top:2vh;
-	width:50%;
-}
-
-.portfolio-info ul {
-	padding: 0;
-	margin: 0;
-	display: none;
-}
-
 
 .container ul {
 	list-style: none;
@@ -549,11 +536,3 @@ nav {
 						font-size: 1.5em;
 					}
 }
-
-@media only screen and (max-width : 600px) {
-	#stratus {
-		display: none;
-	}
-}
-
-
